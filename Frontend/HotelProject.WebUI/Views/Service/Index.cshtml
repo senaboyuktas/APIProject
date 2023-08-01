@@ -1,4 +1,4 @@
-﻿@model List<TestimonialViewModel>
+﻿@model List<ResultServiceDto>
 
 @{
     ViewData["Title"] = "Index";
@@ -9,7 +9,7 @@
     <div class="col p-md-0">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/Dashboard/Index">Ana Sayfa</a></li>
-            <li class="breadcrumb-item active"><a href="/Testimonial/Index">Referanslar</a></li>
+            <li class="breadcrumb-item active"><a href="/Service/Index">Hizmetler</a></li>
         </ol>
     </div>
 </div>
@@ -19,14 +19,13 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Referanslar</h4>
+                    <h4 class="card-title">Hizmetler</h4>
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped verticle-middle text-center">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Referans Adı</th>
-                                    <th scope="col">Referans Ünvanı</th>
+                                    <th scope="col">Hizmet Adı</th>
                                     <th scope="col">Sil</th>
                                     <th scope="col">Güncelle</th>
                                 </tr>
@@ -35,21 +34,19 @@
                                 @foreach (var item in Model)
                                 {
                                     <tr>
-                                        <td>@item.TestimonialID</td>
-                                        <td>@item.Name</td>
+                                        <td>@item.ServiceID</td>
                                         <td>@item.Title</td>
-                                        <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn mb-1 btn-rounded btn-outline-danger">Sil</a></td>
-                                        <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></td>
+                                        <td><a href="/Service/DeleteService/@item.ServiceID" class="btn mb-1 btn-rounded btn-outline-danger">Sil</a></td>
+                                        <td><a href="/Service/UpdateService/@item.ServiceID" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></td>
                                     </tr>
                                 }
                             </tbody>
                         </table>
-                        <a href="/Testimonial/AddTestimonial/" class="btn mb-1 btn-rounded btn-outline-info col-12">Yeni Referans Girişi</a>
+                        <a href="/Service/AddService/" class="btn mb-1 btn-rounded btn-outline-info col-12">Yeni Hizmet Girişi</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
