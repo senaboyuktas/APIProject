@@ -1,0 +1,56 @@
+﻿@model List<ResultRoomDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<div class="row page-titles mx-0">
+    <div class="col p-md-0">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/Dashboard/Index">Ana Sayfa</a></li>
+            <li class="breadcrumb-item active"><a href="/AdminRoom/Index">Odalar</a></li>
+        </ol>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Odalar</h4>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped verticle-middle text-center">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Oda Numarası</th>
+                                    <th scope="col">Oda Adı</th>
+                                    <th scope="col">Yatak Sayısı</th>
+                                    <th scope="col">Banyo Sayısı</th>
+                                    @*<th scope="col">Sil</th>
+                                    <th scope="col">Güncelle</th>*@
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.RoomNumber</td>
+                                        <td>@item.Title</td>
+                                        <td>@item.BedCount</td>
+                                        <td>@item.BathCount</td>
+                                        <td><a href="/AdminRoom/DeleteRoom/@item.RoomID" class="btn mb-1 btn-rounded btn-outline-danger">Sil</a></td>
+                                        <td><a href="/AdminRoom/UpdateRoom/@item.RoomID" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <a href="/AdminRoom/AddRoom/" class="btn mb-1 btn-rounded btn-outline-info col-12">Yeni Oda Ekle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
