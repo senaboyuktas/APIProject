@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 using System;
 using System.Linq;
 using HotelProject.WebUI.Dtos.ContactDto;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HotelProject.WebUI.Controllers
 {
+    [AllowAnonymous]
     public class ContactController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
