@@ -17,6 +17,7 @@ namespace HotelProject.BusinessLayer.Concrete
         {
             _roomDal = roomDal;
         }
+
         public void TDelete(Room t)
         {
             _roomDal.Delete(t);
@@ -30,6 +31,11 @@ namespace HotelProject.BusinessLayer.Concrete
         public List<Room> TGetList()
         {
             return _roomDal.GetList();
+        }
+
+        public int TGetRoomCount()
+        {
+            return _roomDal.GetRoomCount();
         }
 
         public void TInsert(Room t)

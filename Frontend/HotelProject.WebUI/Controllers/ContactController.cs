@@ -9,6 +9,7 @@ using System;
 using System.Linq;
 using HotelProject.WebUI.Dtos.ContactDto;
 using Microsoft.AspNetCore.Authorization;
+using HotelProject.WebUI.Dtos.MessageCategoryDto;
 
 namespace HotelProject.WebUI.Controllers
 {
@@ -20,35 +21,31 @@ namespace HotelProject.WebUI.Controllers
         {
             _httpClientFactory = httpClientFactory;
         }
-        public IActionResult Index()
-        { 
-            return View(); 
-        }
         
-        //public async Task<IActionResult> Index()
-        //{
-        //    var client = _httpClientFactory.CreateClient();
-        //    var responseMessage = await client.GetAsync("http://localhost:22261/api/MessageCategory");
+        public async Task<IActionResult> Index()
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync("http://localhost:22261/api/MessageCategory");
 
-        //    if (responseMessage.IsSuccessStatusCode)
-        //    {
-        //        var jsonData = await responseMessage.Content.ReadAsStringAsync();
-        //        var values = JsonConvert.DeserializeObject<List<ResultMessageCategoryDto>>(jsonData);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<ResultMessageCategoryDto>>(jsonData);
 
-        //        List<SelectListItem> categoyValues = (from x in values
-        //                                              select new SelectListItem
-        //                                              {
-        //                                                  Text = x.Name,
-        //                                                  Value = x.MessageCategoryID.ToString()
-        //                                              }).ToList();
+                List<SelectListItem> categoyValues = (from x in values
+                                                      select new SelectListItem
+                                                      {
+                                                          Text = x.Name,
+                                                          Value = x.MessageCategoryID.ToString()
+                                                      }).ToList();
 
-        //        ViewBag.categories = categoyValues;
+                ViewBag.categories = categoyValues;
 
-        //        return View();
-        //    }
+                return View();
+            }
 
-        //    return View();
-        //}
+            return View();
+        }
 
         [HttpGet]
         public PartialViewResult SendMessage()

@@ -18,7 +18,7 @@ namespace HotelProject.EntityLayer.Concrete
         public string ImageURL { get; set; }
         public string WorkDepartment { get; set; }
 
-        //public int WorkLocationID { get; set; }
-        //public WorkLocation WorkLocation { get; set; }
+        public int WorkLocationID { get; set; }
+        public WorkLocation WorkLocation { get; set; }
     }
 }

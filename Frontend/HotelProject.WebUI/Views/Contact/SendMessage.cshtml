@@ -16,12 +16,12 @@
                         <label for="email">Mail Adresi</label>
                     </div>
                 </div>
-                @*<div class="col-12">
+                <div class="col-12">
                     <div class="form-floating">
-                        @Html.DropDownListFor(x=>x.MessageCategoryID,(List<SelectListItem>)ViewBag.categories,"Konu başlığı seçiniz.",new {@class = "form-control"})
+                        @Html.DropDownListFor(x=>x.MessageCategoryID,(List<SelectListItem>)ViewBag.categories,"Konu başlığı seçiniz ...",new {@class = "form-control"})
                         <label for="subject">Konu Başlığı</label>
                     </div>
-                </div>*@
+                </div>
                 <div class="col-12">
                     <div class="form-floating">
                         <input type="text" asp-for="Subject" class="form-control" id="subject" placeholder="Konu bilgisini giriniz.">

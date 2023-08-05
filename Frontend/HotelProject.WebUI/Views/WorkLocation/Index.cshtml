@@ -1,0 +1,54 @@
+﻿@model List<ResultWorkLocationDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<div class="row page-titles mx-0">
+    <div class="col p-md-0">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/Dashboard/Index">Ana Sayfa</a></li>
+            <li class="breadcrumb-item active"><a href="/WorkLocation/Index">Lokasyonlar</a></li>
+        </ol>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Lokasyonlar</h4>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped verticle-middle text-center">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Lokasyon Adı</th>
+                                    <th scope="col">Şehir</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.WorkLocationID</td>
+                                        <td>@item.Name</td>
+                                        <td>@item.City</td>
+                                        <td><a href="/WorkLocation/DeleteWorkLocation/@item.WorkLocationID" class="btn mb-1 btn-rounded btn-outline-danger">Sil</a></td>
+                                        <td><a href="/WorkLocation/UpdateWorkLocation/@item.WorkLocationID" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <a href="/WorkLocation/AddWorkLocation/" class="btn mb-1 btn-rounded btn-outline-info col-12">Yeni Lokasyon Ekle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
