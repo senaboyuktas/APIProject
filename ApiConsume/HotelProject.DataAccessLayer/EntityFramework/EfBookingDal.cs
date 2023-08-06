@@ -46,7 +46,7 @@ namespace HotelProject.DataAccessLayer.EntityFramework
         {
             var context = new Context();
             var values = context.Bookings.Find(id);
-            values.Status = "Müşteri aranacak";
+            values.Status = "Onay Bekliyor";
             context.SaveChanges();
         }
     }
