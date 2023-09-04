@@ -8,7 +8,7 @@ Asp.Net Core Api, Asp.Net Identity, Swagger, Postman, Api Consume, Rapid Api, Js
 
 Bu proje, otel rezervasyonu alanında faaliyet gösteren bir web sitesini temsil etmektedir. Sitede, çeşitli seçeneklerinin listelendiği, admin kullanıcısının da site içerisinde CRUD işlemleri gerçekleştirebildiği tasarıma sahip bir projedir.
 
-## Aşağıda, proje geliştirme aşamaları sunulmaktadır:
+## Proje Aşamaları:
 
 * ApiConsume, RapidApi ve diğer katmanlar oluşturuldu ve projenin genel yapısı belirlendi.
 * Veritabanı işlemleri için Context sınıfı tanımlandı ve migration işlemi gerçekleştirildi.
