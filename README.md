@@ -6,7 +6,7 @@ Asp.Net Core Api - Rapid Api ve Api Consume
 ## Proje Hakkında: 
 Asp.Net Core Api, Asp.Net Identity, Swagger, Postman, Api Consume, Rapid Api, Json Web Token, Login, Register, AspNet Core 5.0, Fluent Validation, N Tier Architecture, DTO Layer, Mvc, Deploy, Entity Framework Core, Repository Design Pattern, Mail Gönderme İşlemleri gibi konular işlendi.
 
-Bu proje, otel rezervasyonu alanında faaliyet gösteren bir web sitesini temsil etmektedir. Sitede, çeşitli seçeneklerinin listelendiği, kullanıcıların siteye ait bilgilere erişebildiği ve admin kullanıcısının da site içerisinde CRUD işlemleri gerçekleştirebildiği üç farklı tasarıma sahip bir projedir.
+Bu proje, otel rezervasyonu alanında faaliyet gösteren bir web sitesini temsil etmektedir. Sitede, çeşitli seçeneklerinin listelendiği, admin kullanıcısının da site içerisinde CRUD işlemleri gerçekleştirebildiği tasarıma sahip bir projedir.
 
 ## Aşağıda, proje geliştirme aşamaları sıralı bir şekilde sunulmaktadır:
 
@@ -17,9 +17,9 @@ Bu proje, otel rezervasyonu alanında faaliyet gösteren bir web sitesini temsil
 5. Fluent Validation kütüphanesi kullanılarak giriş yapılan verilerin doğruluğu kontrol edildi.
 6. Partial Async ve View Component yapıları kullanılarak performans artırımı sağlandı.
 7. MSSQL veritabanı kullanılarak CRUD işlemleri yapıldı.
-8. Yorumları ait olduğu rotaya göre listeleme ve yaptırma işlemleri gerçekleştirildi.
-9. Identity kullanılarak kullanıcı girişi yapıldı ve kullanıcının profil bilgileri getirildi.
-10. Login ve Register sayfaları oluşturuldu.
+8. Identity kullanılarak kullanıcı girişi yapıldı ve kullanıcının profil bilgileri getirildi.
+9. Login ve Register sayfaları oluşturuldu.
+10. 
 11. Custom Identity Validator işlemleri gerçekleştirildi.
 12. Identity ile kullanıcı profil ve resim bilgisi güncellemesi yapıldı.
 13. Giriş yapmış kullanıcıya ait aktif, onay bekleyen, geçmiş ve yeni rezervasyon sayfaları oluşturuldu.
